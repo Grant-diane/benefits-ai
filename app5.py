@@ -20,6 +20,7 @@ def extract_text(image):
     text = pytesseract.image_to_string(thresh, config=custom_config)
     return text
 
+# difference between app4.py and app5.py is this file uses NLP. Text extraction is same.
 def parse_extracted_text(text):
     doc = nlp(text)
     pii_data = {"Name": "Not found", "DOB": "Not found", "Address": "Not found"}
